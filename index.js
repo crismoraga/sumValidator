@@ -9,10 +9,8 @@ const numeros = [];
 let targetSum;
 
 function ingresarNumero() {
-    console.log("Bienvenido al mejor programa para validar la suma de dos números")
-    console.log("Por favor, ingrese 8 números, todos distintos, y después la suma objetivo")
     if (numeros.length >= 8) {
-        rl.question('Se han ingresado el máximo de 8 valores.\nIngrese la suma objetivo: ', (respuesta) => {
+        rl.question('Se han ingresado el máximo de 8 valores.\n Ingrese la suma objetivo: ', (respuesta) => {
           targetSum = parseInt(respuesta);
           if (!isNaN(targetSum)) {
             console.log('Números ingresados:', numeros);
@@ -35,6 +33,8 @@ function ingresarNumero() {
         }
     }
 
+console.log("Bienvenido al mejor programa para verificar sumas en un arreglo. Por favor, ingrese 8 números y finalmente ingrese la suma que busca")
+
 ingresarNumero();
 
 function twoNumberSum(array, targetSum) { 
@@ -46,10 +46,10 @@ for(let k=0; k<array.length; k++){
     }
 }
 if(array.length === 0){
-    console.log("No hay coincidencias")
+    return console.log("No hay coincidencias")
 }
 else{
-    console.log("El array resultante es: ", array)
+    return console.log("El array resultante es: ", array)
 }
 }
 }
