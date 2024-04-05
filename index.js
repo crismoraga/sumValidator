@@ -63,3 +63,5 @@ function twoNumberSum(array, targetSum) {
         return console.log("El array resultante es: ", resultado);
     }
 }
+
+//Para recibir por pantalla valores, se buscó la función por internet. El resto fue todo hecho a mano.
