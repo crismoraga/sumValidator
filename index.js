@@ -52,8 +52,8 @@ function twoNumberSum(array, targetSum) {
     }
 
     if (resultado.length === 0) {
-        console.log("No hay coincidencias");
+        return console.log("No hay coincidencias");
     } else {
-        console.log("El array resultante es: ", resultado);
+        return console.log("El array resultante es: ", resultado);
     }
 }
