@@ -26,8 +26,14 @@ function ingresarNumero() {
         rl.question(`Ingrese el valor ${numeros.length + 1}: `, (respuesta) => {
             const numero = parseFloat(respuesta);
             if (!isNaN(numero)) {
-                numeros.push(numero);
-                ingresarNumero(); 
+                    if(numeros.includes(numero) ==  false){
+                        numeros.push(numero);
+                        ingresarNumero(); 
+                    }
+                    else {
+                        console.log('Error: Por favor, ingrese un número que no haya ingresado antes.');
+                        ingresarNumero(); 
+                    }
             } else {
                 console.log('Error: Por favor, ingrese un número válido.');
                 ingresarNumero(); 
