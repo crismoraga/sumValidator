@@ -31,7 +31,8 @@ function ingresarNumero() {
             } else {
                 console.log('Error: Por favor, ingrese un número válido.');
                 ingresarNumero(); 
-        });
+            }
+        }); 
     }
 }
 
@@ -51,8 +52,8 @@ function twoNumberSum(array, targetSum) {
     }
 
     if (resultado.length === 0) {
-        console.log("No hay coincidencias")
+        console.log("No hay coincidencias");
     } else {
-        console.log("El array resultante es: ", resultado)
+        console.log("El array resultante es: ", resultado);
     }
 }
