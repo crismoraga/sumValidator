@@ -6,17 +6,17 @@ const rl = readline.createInterface({
 });
 
 const numeros = [];
-let sumaObjetivo;
+let targetSum;
 
 function ingresarNumero() {
     console.log("Bienvenido al mejor programa para validar la suma de dos números")
     console.log("Por favor, ingrese 8 números, todos distintos, y después la suma objetivo")
     if (numeros.length >= 8) {
         rl.question('Se han ingresado el máximo de 8 valores.\nIngrese la suma objetivo: ', (respuesta) => {
-          sumaObjetivo = parseInt(respuesta);
-          if (!isNaN(sumaObjetivo)) {
+          targetSum = parseInt(respuesta);
+          if (!isNaN(targetSum)) {
             console.log('Números ingresados:', numeros);
-            console.log('Suma objetivo:', sumaObjetivo);
+            console.log('Suma objetivo:', targetSum);
           } else {
             console.log('Error: Por favor, ingrese un valor entero para la suma objetivo.');
           }
@@ -53,7 +53,5 @@ else{
 }
 }
 }
-
-const targetSum = 10
-const result = twoNumberSum(array, targetSum)
+const result = twoNumberSum(numeros, targetSum)
 console.log(result)
