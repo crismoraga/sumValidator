@@ -46,7 +46,7 @@ function twoNumberSum(array, targetSum) {
     for (let k = 0; k < array.length; k++) {
         for (let l = 0; l < array.length; l++) {
             if (array[k] + array[l] === targetSum) {
-                resultado.push([k, l]);
+                resultado.push(array[k], array[l]);
             }
         }
     }
