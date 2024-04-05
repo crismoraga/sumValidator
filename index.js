@@ -15,7 +15,6 @@ function ingresarNumero() {
             if (!isNaN(targetSum)) {
                 console.log('Números ingresados:', numeros);
                 console.log('Suma objetivo:', targetSum);
-                // Llama a twoNumberSum después de que se hayan ingresado los números y la suma objetivo
                 const result = twoNumberSum(numeros, targetSum);
                 console.log(result);
             } else {
@@ -28,11 +27,10 @@ function ingresarNumero() {
             const numero = parseFloat(respuesta);
             if (!isNaN(numero)) {
                 numeros.push(numero);
-                ingresarNumero(); // Llama a la función dentro del callback de rl.question()
+                ingresarNumero(); 
             } else {
                 console.log('Error: Por favor, ingrese un número válido.');
-                ingresarNumero(); // Vuelve a llamar a la función para permitir que el usuario ingrese otro valor
-            }
+                ingresarNumero(); 
         });
     }
 }
@@ -45,7 +43,7 @@ function twoNumberSum(array, targetSum) {
     const resultado = [];
 
     for (let k = 0; k < array.length; k++) {
-        for (let l = k + 1; l < array.length; l++) {
+        for (let l = 0; l < array.length; l++) {
             if (array[k] + array[l] === targetSum) {
                 resultado.push([k, l]);
             }
@@ -53,8 +51,8 @@ function twoNumberSum(array, targetSum) {
     }
 
     if (resultado.length === 0) {
-        return "No hay coincidencias";
+        console.log("No hay coincidencias");
     } else {
-        return "El array resultante es: " + resultado.map(pair => `[${pair.join(", ")}]`).join(", ");
+        console.log("El array resultante es: ", resultado);
     }
 }
