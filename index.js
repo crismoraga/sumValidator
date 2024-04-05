@@ -39,8 +39,8 @@ ingresarNumero();
 
 function twoNumberSum(array, targetSum) { 
 array = [];
-for(let k=0, k<array.length, k++){
-    for(let l=0, l<array.length, l++){
+for(let k=0; k<array.length; k++){
+    for(let l=0; l<array.length; l++){
         if(array[k]+array[l]===targetSum){
             array.push(k, l)
     }
