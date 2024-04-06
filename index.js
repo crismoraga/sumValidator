@@ -1,11 +1,11 @@
-const readline = require('readline');
+const readline = require('readline'); //función sacada de internet
 
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-const numeros = [];
+const numeros = []; //se cambió array por numeros
 let targetSum;
 
 function ingresarNumero() {
@@ -48,7 +48,6 @@ ingresarNumero();
 
 function twoNumberSum(array, targetSum) {
     const resultado = [];
-
     for (let k = 0; k < array.length; k++) {
         for (let l = 0; l < array.length; l++) {
             if (array[k] + array[l] === targetSum) {
@@ -59,7 +58,6 @@ function twoNumberSum(array, targetSum) {
             }
         }
     }
-
     if (resultado.length === 0) {
         return console.log("No hay coincidencias");
     }
