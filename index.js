@@ -13,8 +13,8 @@ function ingresarNumero() {
         rl.question('Se han ingresado el máximo de 8 valores.\n Ingrese la suma objetivo: ', (respuesta) => {
             targetSum = parseInt(respuesta);
             if (!isNaN(targetSum)) {
-                console.log('Números ingresados:', numeros);
-                console.log('Suma objetivo:', targetSum);
+                console.log('\nNúmeros ingresados: ', numeros);
+                console.log('\nSuma objetivo:', targetSum);
                 const result = twoNumberSum(numeros, targetSum);
                 console.log(result);
             } else {
@@ -53,11 +53,11 @@ function twoNumberSum(array, targetSum) {
         for (let l = 0; l < array.length; l++) {
             if (array[k] + array[l] === targetSum) {
                 resultado.push(array[k], array[l]);
+                if(resultado.length === 2){
+                    return console.log("El array resultante es: ", resultado);
+                }
             }
         }
-    }
-    if(resultado.length === 2){
-        return console.log("El array resultante es: ", resultado);
     }
 
     if (resultado.length === 0) {
