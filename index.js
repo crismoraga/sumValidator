@@ -56,11 +56,12 @@ function twoNumberSum(array, targetSum) {
             }
         }
     }
+    if(resultado.length === 2){
+        return console.log("El array resultante es: ", resultado);
+    }
 
     if (resultado.length === 0) {
         return console.log("No hay coincidencias");
-    } else {
-        return console.log("El array resultante es: ", resultado);
     }
 }
 
